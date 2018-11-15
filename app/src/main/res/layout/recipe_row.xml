@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="12dp"
+    android:elevation="90dp"
+    android:layout_margin="7dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:background="#121111"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:scaleType="centerCrop"
+            android:id="@+id/Recipe_image"
+            />
+
+        <TextView
+            android:id="@+id/Recipe_Title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Recipe Title"
+            android:textColor="#ffffff"
+            android:textSize="20dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="About Recipe"
+            android:textColor="#ffffff"
+            android:id="@+id/Recipe_Des"/>
+
+        <!--  <VideoView
+              android:layout_width ="match_parent"
+              android:layout_height="wrap_content"
+              android:id="@+id/Vid"  /> -->
+
+    </LinearLayout>
+
+
+
+</android.support.v7.widget.CardView>

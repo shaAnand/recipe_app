@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "352514833546",
+    "firebase_url": "https://cookingreciperuds.firebaseio.com",
+    "project_id": "cookingreciperuds",
+    "storage_bucket": "cookingreciperuds.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:352514833546:android:9d9247bac9f6e97d",
+        "android_client_info": {
+          "package_name": "com.example.rudranisharma.cooking_recipes"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "352514833546-el4a5kgju5pm4kc48l1bu33csusr9lbl.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.rudranisharma.cooking_recipes",
+            "certificate_hash": "88bf1fcbb8e04a3309ea54ea4eeb82fb050491b6"
+          }
+        },
+        {
+          "client_id": "352514833546-1nbdqkan104bi439807stadrgvg1evuh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC74Augs7jrfOGmwYVua497T5wPcidYz_s"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "352514833546-1nbdqkan104bi439807stadrgvg1evuh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
