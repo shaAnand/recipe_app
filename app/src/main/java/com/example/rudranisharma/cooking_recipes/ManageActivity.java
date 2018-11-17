@@ -37,7 +37,7 @@ public class ManageActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_manage);
-        mDatabase = FirebaseDatabase.getInstance().getReference().child("1");
+        mDatabase = FirebaseDatabase.getInstance().getReference().child("Global");
         mDatabase.keepSynced(true);
 
         mRecipeList = (RecyclerView) findViewById(R.id.rv);
