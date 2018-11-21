@@ -19,20 +19,88 @@
             android:text="Choose Image"
             android:layout_weight="1"
             android:layout_width="0dp"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            />
 
         <Button
             android:id="@+id/btnUpload"
             android:text="Upload Image"
             android:layout_weight="1"
             android:layout_width="0dp"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+          />
     </LinearLayout>
     <ImageView
         android:id="@+id/imgView"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
+
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="?attr/actionBarSize"
+            android:orientation="vertical"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="50dp">
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/nameLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/TitleET"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:hint= "Recipe Name" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/propLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/DescET"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:hint= "Description" />
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/descLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/DetailDescET"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:hint= "Recipe Details" />
+                </android.support.design.widget.TextInputLayout>
+
+            </android.support.design.widget.TextInputLayout>
+
+            <Button android:id="@+id/saveBtn"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Save"
+                android:clickable="true"
+                android:background="@color/colorAccent"
+                android:layout_marginTop="40dp"
+                android:textColor="@android:color/white"/>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
 </RelativeLayout>
-
-
 

@@ -27,7 +27,6 @@ import com.squareup.picasso.Picasso;
 
 
 
-
 public class ManageActivity extends AppCompatActivity {
 
     private RecyclerView mRecipeList;
@@ -61,7 +60,7 @@ public class ManageActivity extends AppCompatActivity {
 
     protected void onStart() {
         super.onStart();
-        FirebaseRecyclerAdapter<Recipe, RecipeViewHolder> firebaseRecyclerAdapter = new FirebaseRecyclerAdapter<Recipe, RecipeViewHolder>
+        FirebaseRecyclerAdapter<Recipe, RecipeViewHolder> RecyclerAdapter = new FirebaseRecyclerAdapter<Recipe, RecipeViewHolder>
                 (Recipe.class, R.layout.recipe_row, RecipeViewHolder.class, mDatabase) {
             @Override
             protected void populateViewHolder(RecipeViewHolder viewHolder, Recipe model, int position) {
@@ -73,16 +72,19 @@ public class ManageActivity extends AppCompatActivity {
 
         };
 
-        mRecipeList.setAdapter(firebaseRecyclerAdapter);
+        mRecipeList.setAdapter(RecyclerAdapter);
 
     }
 
     public static class RecipeViewHolder extends RecyclerView.ViewHolder {
         View mView;
 
-        public RecipeViewHolder(View itemView) {
+
+        public RecipeViewHolder(final View itemView) {
             super(itemView);
             mView = itemView;
+
+
         }
 
         public void setTitle(String Title) {
@@ -102,8 +104,11 @@ public class ManageActivity extends AppCompatActivity {
 
         }
 
+
+    }
     }
 
 
 
-}
+
+
