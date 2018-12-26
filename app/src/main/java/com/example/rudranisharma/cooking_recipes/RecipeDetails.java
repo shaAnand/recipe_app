@@ -18,9 +18,9 @@ public class RecipeDetails extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.recipe_details_layout);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        //Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+       // setSupportActionBar(toolbar);
+       // FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
 
         nameTxt = (TextView) findViewById(R.id.TitleDTxt);
         descTxt= (TextView) findViewById(R.id.DescDTxt);
@@ -41,13 +41,13 @@ public class RecipeDetails extends AppCompatActivity {
        detTxt.setText(propellant);
 
 
-        fab.setOnClickListener(new View.OnClickListener() {
+       /* fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
-        });
+        });*/
     }
 
 }
