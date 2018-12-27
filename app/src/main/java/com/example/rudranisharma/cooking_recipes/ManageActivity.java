@@ -35,7 +35,7 @@ public class ManageActivity extends AppCompatActivity {
     private DatabaseReference mDatabase;
     public static interface ClickListener{
         public void onClick(View view,int position);
-        // public void onLongClick(View view,int position);
+
     }
 
     @Override
@@ -85,6 +85,7 @@ public class ManageActivity extends AppCompatActivity {
             protected void populateViewHolder(RecipeViewHolder viewHolder, Recipe model, int position) {
                 viewHolder.setTitle(model.getName());
                 viewHolder.setDesc(model.getDescription());
+                viewHolder.setDDesc(model.getRecipe_details());
                 viewHolder.setImage(getApplicationContext(), model.getImage());
 
             }
@@ -114,6 +115,11 @@ public class ManageActivity extends AppCompatActivity {
         private void setDesc(String Des) {
             TextView Recipe_desc = (TextView) mView.findViewById(R.id.Recipe_Des);
             Recipe_desc.setText(Des);
+
+        }
+        private void setDDesc(String Des1) {
+            TextView Recipe_desc1 = (TextView) mView.findViewById(R.id.Recipe_DDes);
+            Recipe_desc1.setText(Des1);
 
         }
 

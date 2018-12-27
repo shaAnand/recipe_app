@@ -1,6 +1,7 @@
 package com.example.rudranisharma.cooking_recipes;
 
 import android.content.Intent;
+import android.media.Image;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
@@ -9,6 +10,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.google.firebase.database.DataSnapshot;
@@ -20,7 +23,10 @@ import com.google.firebase.database.ValueEventListener;
 public class RecipeDetails extends AppCompatActivity {
 
 
-    TextView nameTxt,descTxt, detTxt;
+    TextView nameTxt;
+    TextView descTxt;
+    TextView detTxt;
+    ImageView Image2;
     private DatabaseReference mDatabase;
     int pos;
 
@@ -35,6 +41,7 @@ public class RecipeDetails extends AppCompatActivity {
         nameTxt = (TextView) findViewById(R.id.TitleDTxt);
         descTxt= (TextView) findViewById(R.id.DescDTxt);
         detTxt = (TextView) findViewById(R.id.DescDetailDTxt);
+        Image2 = (ImageView) findViewById(R.id.Recipe_image);
 
 
         //GET INTENT
@@ -54,6 +61,8 @@ public class RecipeDetails extends AppCompatActivity {
                         nameTxt.setText(""+profile.getName());
                         descTxt.setText(""+profile.getDescription());
                         detTxt.setText(""+profile.getRecipe_details());
+                        //Image2.set(""+profile.getImage());
+
 
                     }
                     posLocal++;
@@ -70,7 +79,7 @@ public class RecipeDetails extends AppCompatActivity {
 
 
 
-
+/*
         //RECEIVE DATA
         String name=i.getExtras().getString("NAME_KEY");
         String desc=i.getExtras().getString("DESC_KEY");
@@ -79,7 +88,7 @@ public class RecipeDetails extends AppCompatActivity {
         //BIND DATA
         nameTxt.setText(name);
         descTxt.setText(desc);
-       detTxt.setText(ddesc);
+       detTxt.setText(ddesc);*/
 
 
        /* fab.setOnClickListener(new View.OnClickListener() {

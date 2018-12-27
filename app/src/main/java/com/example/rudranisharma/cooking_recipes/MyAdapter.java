@@ -2,6 +2,7 @@ package com.example.rudranisharma.cooking_recipes;
 
 import android.content.Context;
 import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,9 +10,9 @@ import android.view.ViewGroup;
 
 import java.util.ArrayList;
 
-public class MyAdapter extends RecyclerView.Adapter<MyViewHolder> {
+public class MyAdapter  {
 
-        Context c;
+        /*Context c;  extends RecyclerView.Adapter<MyViewHolder>
         ArrayList<Recipe> recipes;
 
         public MyAdapter(Context c, ArrayList<Recipe> recipes) {
@@ -31,7 +32,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyViewHolder> {
 
             holder.RTitle.setText(s.getName());
             holder.RDes.setText(s.getDescription());
-            // holder.RImage.setImage(s.getImage());;
+            holder.RImage.setImageURI(Uri.parse(s.getImage()));;
 
 
 
@@ -56,10 +57,11 @@ public class MyAdapter extends RecyclerView.Adapter<MyViewHolder> {
 
             i.putExtra("NAME_KEY",details[0]);
             i.putExtra("DESC_KEY",details[1]);
-            i.putExtra("IMAGE_KEY",details[2]);
+            i.putExtra("DDESC_KEY",details[2]);
+            i.putExtra("IMAGE_KEY",details[3]);
 
             c.startActivity(i);
-        }
+        }*/
     }
 
 

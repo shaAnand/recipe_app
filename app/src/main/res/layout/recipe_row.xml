@@ -36,6 +36,12 @@
             android:text="About Recipe"
             android:textColor="#ffffff"
             android:id="@+id/Recipe_Des"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Recipe"
+            android:textColor="#ffffff"
+            android:id="@+id/Recipe_DDes"/>
 
         <!--  <VideoView
               android:layout_width ="match_parent"

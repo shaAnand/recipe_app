@@ -10,9 +10,9 @@ import android.widget.TextView;
 
 
 
-public class MyViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
+public class MyViewHolder {
 
-    TextView RTitle,RDes;
+   /* TextView RTitle,RDes; extends RecyclerView.ViewHolder implements View.OnClickListener
     ImageView RImage;
     ItemClickListener itemClickListener;
 
@@ -35,6 +35,6 @@ public class MyViewHolder extends RecyclerView.ViewHolder implements View.OnClic
     @Override
     public void onClick(View view) {
         this.itemClickListener.onItemClick(this.getLayoutPosition());
-    }
+    }*/
 }
 
