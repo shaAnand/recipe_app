@@ -51,7 +51,10 @@ public class RecipeDetails extends AppCompatActivity {
                         Log.e("aaaa getKey ", child.getKey() + " " + child.getChildren());
                         Recipe profile = child.getValue(Recipe.class);
                         Log.e("aaaa getValue getTitle", "" + profile.getImage());
-                        nameTxt.setText(""+profile.getDescription());
+                        nameTxt.setText(""+profile.getName());
+                        descTxt.setText(""+profile.getDescription());
+                        detTxt.setText(""+profile.getRecipe_details());
+
                     }
                     posLocal++;
                 }
@@ -71,12 +74,12 @@ public class RecipeDetails extends AppCompatActivity {
         //RECEIVE DATA
         String name=i.getExtras().getString("NAME_KEY");
         String desc=i.getExtras().getString("DESC_KEY");
-        String propellant=i.getExtras().getString("PROP_KEY");
+        String ddesc=i.getExtras().getString("PROP_KEY");
 
         //BIND DATA
         nameTxt.setText(name);
         descTxt.setText(desc);
-       detTxt.setText(propellant);
+       detTxt.setText(ddesc);
 
 
        /* fab.setOnClickListener(new View.OnClickListener() {

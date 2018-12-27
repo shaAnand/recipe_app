@@ -29,7 +29,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyViewHolder> {
         public void onBindViewHolder(MyViewHolder holder, int position) {
             final  Recipe s=recipes.get(position);
 
-            holder.RTitle.setText(s.getTitle());
+            holder.RTitle.setText(s.getName());
             holder.RDes.setText(s.getDescription());
             // holder.RImage.setImage(s.getImage());;
 
@@ -39,7 +39,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyViewHolder> {
                 @Override
                 public void onItemClick(int pos) {
                     //OPEN DETAI ACTIVITY
-                    openDetailActivity(s.getTitle(),s.getDescription(),s.getImage());
+                    openDetailActivity(s.getName(),s.getDescription(),s.getImage());
                 }
             });
         }

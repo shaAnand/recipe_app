@@ -83,7 +83,7 @@ public class ManageActivity extends AppCompatActivity {
                 (Recipe.class, R.layout.recipe_row, RecipeViewHolder.class, mDatabase) {
             @Override
             protected void populateViewHolder(RecipeViewHolder viewHolder, Recipe model, int position) {
-                viewHolder.setTitle(model.getTitle());
+                viewHolder.setTitle(model.getName());
                 viewHolder.setDesc(model.getDescription());
                 viewHolder.setImage(getApplicationContext(), model.getImage());
 

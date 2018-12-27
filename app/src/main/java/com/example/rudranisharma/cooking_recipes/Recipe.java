@@ -1,38 +1,47 @@
 package com.example.rudranisharma.cooking_recipes;
 
 public class Recipe {
-    private String Title;
+    private String Name;
     private String Description;
     private String Image;
+    private String Recipe_details;
 
-    public Recipe(String title, String description, String image) {
-        Title = title;
-        Description = description;
-        Image = image;
+    public Recipe(String Title, String Description1, String Image1 , String Recipe_details1) {
+        Name = Title;
+        Description = Description1;
+        Recipe_details = Recipe_details1;
+        Image = Image1;
     }
 
-    public String getTitle() {
-        return Title;
+    public String getName() {
+        return Name;
     }
 
-    public void setTitle(String title) {
-        Title = title;
+    public void setName(String Title) {
+        Name = Title;
     }
 
     public String getDescription() {
         return Description;
     }
 
-    public void setDescription(String description) {
-        Description = description;
+    public void setDescription(String Description1) {
+        Description = Description1;
     }
+
+    public String getRecipe_details () {
+        return Recipe_details;
+    }
+
+    public void setRecipe_details(String Recipe_details1) {
+        Recipe_details = Recipe_details1;}
 
     public String getImage() {
         return Image;
     }
 
-    public void setImage(String image) {
-        Image = image;
+    public void setImage(String Image1) {
+        Image = Image1;
     }
     public Recipe(){
 
