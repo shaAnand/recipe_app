@@ -1,7 +1,9 @@
 package com.example.rudranisharma.cooking_recipes;
 
+import android.app.usage.NetworkStats;
 import android.content.Intent;
 import android.media.Image;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
@@ -14,11 +16,16 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+
+import java.util.EventListener;
+
+import static java.lang.String.format;
 
 public class RecipeDetails extends AppCompatActivity {
 
@@ -27,16 +34,14 @@ public class RecipeDetails extends AppCompatActivity {
     TextView descTxt;
     TextView detTxt;
     ImageView Image2;
-    private DatabaseReference mDatabase;
+    public DatabaseReference mDatabase;
     int pos;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.recipe_details_layout);
-        //Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-       // setSupportActionBar(toolbar);
-       // FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
 
         nameTxt = (TextView) findViewById(R.id.TitleDTxt);
         descTxt= (TextView) findViewById(R.id.DescDTxt);
@@ -53,18 +58,22 @@ public class RecipeDetails extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 int posLocal = 0;
+
                 for (DataSnapshot child : dataSnapshot.getChildren()) {
                     if(posLocal== pos) {
                         Log.e("aaaa getKey ", child.getKey() + " " + child.getChildren());
                         Recipe profile = child.getValue(Recipe.class);
-                        Log.e("aaaa getValue getTitle", "" + profile.getImage());
+                       // Log.e("aaaa getValue getTitle", "" + profile.getRecipe_details());
                         nameTxt.setText(""+profile.getName());
                         descTxt.setText(""+profile.getDescription());
                         detTxt.setText(""+profile.getRecipe_details());
-                        //Image2.set(""+profile.getImage());
-
+                       //Image2.setImageURI(Uri.parse(""+profile.getImage()));
+                      // String image = dataSnapshot.child("image").getValue(String.class);
+                      // Log.d("TAG", String.valueOf(image));
 
                     }
+
+
                     posLocal++;
                 }
 
@@ -74,6 +83,7 @@ public class RecipeDetails extends AppCompatActivity {
             public void onCancelled(@NonNull DatabaseError databaseError) {
 
             }
+
         });
 
 
